@@ -29,7 +29,7 @@ def step2():
 #rendering the HTML page which has the button
 @app.route('/')
 def root():
-    return render_template('2-en.html', url='https://docs.google.com/spreadsheets/d/1B6_hpOEs9xCn22Pe_gWs37TEGa9rKcwGWY1M7--NrNI', lang='en')
+    return render_template('1-en.html')
 
 
 @app.route('/run_the_algorithm')

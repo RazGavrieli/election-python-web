@@ -1,7 +1,6 @@
 from elections import *
 
 import gspread
-import time
 
 def run(url):
     account = gspread.service_account("credentials.json")
