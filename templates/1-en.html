@@ -1,0 +1,29 @@
+<html dir="ltr" lang="{{lang}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+<!-- <link rel="stylesheet" href="style.css"/> -->
+<style>
+  li {margin-top: 1em;}
+  .error {color: red}
+</style>
+<body>
+
+<h1>Fair Division</h1>
+{% if error %}
+<p class="error">{{error}}</p>
+{% endif %}
+
+Start dividing things fairly in three easy steps:
+<ol>
+<li>Create a new Google Spreadsheet;</li>
+<li>Share the spreadsheet with the following email address: <br/><b>research-algorithms@blissful-acumen-374111.iam.gserviceaccount.com</b></li>
+<li>Headers of the first sheet should be: "name", "votes", "with"(optional)
+<li>Enter the URL of the spreadsheet here:
+<form method="GET" action="/2">
+  <input name="url" size='100'/>
+  <input type='submit' name="url" value="done" />
+</form>
+</li>
+</ol>
+</body>
+</html>
