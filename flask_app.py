@@ -1,6 +1,4 @@
 from flask import Flask, render_template, Response, request
-import os
-
 app = Flask(__name__)
 
 # Solution from here: https://stackoverflow.com/a/49334973
@@ -26,12 +24,12 @@ def step2():
         error = type(e).__name__ + "! Please check your URL and try again."
     if error != None:
         return error
-    return render_template(os.path.dirname('2-en.html'), url=url, lang='en')
+    return render_template('2-en.html', url=url, lang='en')
 
 #rendering the HTML page which has the button
 @app.route('/')
 def root():
-    return render_template(os.path.dirname('1-en.html'))
+    return render_template('1-en.html')
 
 
 @app.route('/run_the_algorithm')
