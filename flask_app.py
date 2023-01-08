@@ -8,10 +8,10 @@ def step2():
     url = request.args.get('url')
     print("url=",url)
     error = None
+    import gspread
+    account = gspread.service_account("credentials.json")
+    print("account=",account)
     try:
-        import gspread
-        account = gspread.service_account("credentials.json")
-        print("account=",account)
         spreadsheet = account.open_by_url(url)
         print("spreadsheet=",spreadsheet)
     except gspread.exceptions.APIError:
